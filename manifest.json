@@ -1,0 +1,23 @@
+{
+  "name": "YouNBX TV",
+  "short_name": "YouNBX TV",
+  "description": "Live Streaming TV & Sports",
+  "start_url": "https://younbxtv.blogspot.com/",
+  "scope": "https://younbxtv.blogspot.com/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#d60000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://blogger.googleusercontent.com/...../icon192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://blogger.googleusercontent.com/...../icon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
