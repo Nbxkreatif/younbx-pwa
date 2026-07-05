@@ -17,3 +17,27 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const messaging = getMessaging(app);
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register(
+    "https://nbxkreatif.github.io/younbx-pwa/firebase-messaging-sw.js"
+  ).then(async (registration) => {
+
+    const permission = await Notification.requestPermission();
+
+    if (permission === "granted") {
+
+      const token = await getToken(messaging, {
+        vapidKey: "iGxBX4y5iShDx4byION2nc1leJiD1VDQOiK1NwvaVn4",
+        serviceWorkerRegistration: registration
+      });
+
+      console.log("FCM Token:", token);
+
+      alert("Notifikasi berhasil diaktifkan");
+    } else {
+      alert("Izin notifikasi ditolak");
+    }
+
+  });
+}
