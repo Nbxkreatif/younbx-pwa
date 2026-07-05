@@ -21,7 +21,16 @@ const app = initializeApp(firebaseConfig);
 const messaging = getMessaging(app);
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/younbx-pwa/firebase-messaging-sw.js").then(async (registration) => {
+  try {
+    const registration = await navigator.serviceWorker.register(
+      "https://nbxkreatif.github.io/younbx-pwa/firebase-messaging-sw.js"
+    );
+
+    alert("Service Worker berhasil didaftarkan");
+  } catch (e) {
+    alert("Error: " + e.message);
+  }
+}
 
     const permission = await Notification.requestPermission();
 
