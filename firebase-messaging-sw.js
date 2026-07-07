@@ -20,8 +20,8 @@ messaging.onBackgroundMessage((payload) => {
     payload.notification.title,
     {
       body: payload.notification.body,
-      icon: "https://nbxkreatif.github.io/younbx-pwa/20260704_040233.png",
-      badge: "https://nbxkreatif.github.io/younbx-pwa/20260704_040233.png"
+      icon: "https://nbxkreatif.github.io/younbx-pwa/20260708_005202.png",
+      badge: "https://nbxkreatif.github.io/younbx-pwa/20260708_005202.png"
     }
   );
 });
